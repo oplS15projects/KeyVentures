@@ -14,11 +14,11 @@ To tackle this problem, we will use lambdas, lets, conditional statements, and t
 In the beginning of the game, we will run a C++ code to take a picture of the user's face and depending upon whether they are happy or sad, choose "Evil Khy" or "nice-guy Justin" to play the rest of the game. The data will be passed from c++ to Racket via JSON. 
 
 ### Deliverable and Demonstration
-At the end, there will be a working platformer game called Keyventure. The user will be able to choose Khy or Justin depending on their initial mood and use the arrow keys on the keyboard to control the character's movement. The spacebar will be used to make the character jump over dangerous obstacles. 
+At the end, there will be a working platformer game called Keyventure. The user will be able to choose Khy or Justin depending on their initial mood and use the arrow keys on the keyboard to control the character's movement. The spacebar or up arrow will be used to make the character jump over dangerous obstacles. 
 
 This program will be interactive and will present the user with a GUI that they can play with. We will get keyboard input from the user to control movement.
 
-### Evaluation of Resultsd
+### Evaluation of Results
 If the game fully works, the user will be able to smile at the beginning of the game and play the rest of the game as nice-guy Justin or they can be sad and play the rest of the game as evil Khy. 
 
 ## Work Plan and Schedule
@@ -40,7 +40,7 @@ Here each group member gets a section where they, as an individual, detail what 
 - Take keyboard input and move characters
 - Building some levels
 
-### Khyteang  
+### Khyteang Lim
 - GUI of the game
 - Creating the window
 - Uploading the characters from the HDTP/PlanetCute library
