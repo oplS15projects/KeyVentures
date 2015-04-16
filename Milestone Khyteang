@@ -43,3 +43,8 @@ Codes:
 (big-bang '(253 . 354) 
           (to-draw scenes) 
           (on-key change))
+
+
+What I am working on?
+
+The next step would be to add more block scene whenever the character moves to the right and at the same time, the leftmost blocks should get deleted when the character moves to the right.
