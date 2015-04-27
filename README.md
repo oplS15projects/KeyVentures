@@ -35,11 +35,15 @@ Identify the OPL concepts demonstrated in your project. Be brief. A simple list 
 ##Favorite Lines of Code
 ####Khyteang Lim
 ```scheme
-(define (scoreReach30 n) (cond ((= player2score 15) (begin (write evil) #t))
-                               ((= player1score 15) (begin (write good) #t))
-                               (else #f)))
+(define (setUpCharacter) 
+  (cond ((pick-character) (begin (set! player1 (cond ((= (random 2) 0) (car goodSetCharacter))
+               (else (car (cdr goodSetCharacter))))) (set! player-name1 (text "GoodGuyJustin" 12 "black")) (set! player2 (cond ((= (random 2) 0) (car evilSetCharacter))
+               (else (car (cdr evilSetCharacter))))) (set! player-name2 (text "EvilKhy" 12 "black"))))
+        (else (begin (set! player2 (cond ((= (random 2) 0) (car goodSetCharacter))
+               (else (car (cdr goodSetCharacter))))) (set! player1 (cond ((= (random 2) 0) (car evilSetCharacter))
+               (else (car (cdr evilSetCharacter)))))))))
 ```
-This code is one of my favorites even though it looks simple. This is a pedicate that returns a boolean value depending on the condition statement that it checks for. This pedicate returns true if one of the players score reaches 15 and false if otherwise. However, what makes this code interesting is the fact that before it returns a boolean value, it performs some executions using the begin procedure. This begin procedure allows multiple executations of procedures before returning the boolean value.  
+This code is what allows the first player to choose which characters, EvilKhy or GoodGuyJustin, he/she wants to play as in the game. This use the concept of the conditional statement which checks to see if the procedure pick-character returns true or false. However, what makes this piece of code interesting is that it uses the begin and set! procedures. The begin procedure allows multiple executations of procedures while set! allows redefining of variables.
 
 ####Justin Nguyen
  ```scheme
