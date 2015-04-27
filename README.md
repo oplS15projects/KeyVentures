@@ -21,7 +21,9 @@ Rohit Krishnam
 A brief description of the project is given here.  The description is 1 to 3 sentences long.  Be concise and clear.
 
 ##Screenshot
-![screenshot showing env diagram](OPLProjectScreenshot.png)
+<p align="center">
+     <img src="http://i.imgur.com/mndA6YT.png?1"/>
+</p>
 
 ##Concepts Demonstrated
 Identify the OPL concepts demonstrated in your project. Be brief. A simple list and example is sufficient. 
@@ -43,7 +45,7 @@ Each team member should identify a favorite line of code, expression, or procedu
                                ((= player1score 15) (begin (write good) #t))
                                (else #f)))
 ```
-This code is one of my favorites even though it looks simple. This is a pedicate that returns a boolean value depending on the condition statement. This pedicate returns true if one of the players score reaches 15 and false if otherwise. However, what makes this code interesting is the fact that before it returns a boolean value, it performs some executions using the begin procedure. This begin procedure allows multiple executations of procedure before returning the boolean value.  
+This code is one of my favorites even though it looks simple. This is a pedicate that returns a boolean value depending on the condition statement that it checks for. This pedicate returns true if one of the players score reaches 15 and false if otherwise. However, what makes this code interesting is the fact that before it returns a boolean value, it performs some executions using the begin procedure. This begin procedure allows multiple executations of procedures before returning the boolean value.  
 
 ####Lillian (another team member)
 This expression reads in a regular expression and elegantly matches it against a pre-existing hashmap....
