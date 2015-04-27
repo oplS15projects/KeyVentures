@@ -1,11 +1,9 @@
 # KeyVentures
-KeyVentures! An adventure platformer game.
+KeyVentures! An adventure multiplayer game.
 
 # KeyVentures
 
 ##Authors
-
-
 Khyteang Lim
 
 
