@@ -12,8 +12,7 @@ Rohit Krishnan
 
 
 ##Overview
-KeyVentures is a multi-player key finding game where two players race against each other to capture the key first. There is a twist where in the beginning of the game, we take a picture of the user to determine whether they will play as the good character or the evil character. Additinoally, when a character captures a key by walking over it, we increment the total points that they have. 
-
+KeyVentures is a multi-player key finding game where two players race against each other to capture the key first. There is a twist where in the beginning of the game, we take a picture of the user to determine whether they will play as the good character or the evil character. Additionally, when a character captures a key by walking over it, we increment the total points that they have. 
 
 ##Screenshot
 <p align="center">
