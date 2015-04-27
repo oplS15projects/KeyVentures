@@ -16,7 +16,6 @@ Rohit Krishnan
 
 
 ##Overview
-KeyVentures is a multi-player key finding game where two players race against each other to capture the key first. There is a twist where in the beginning of the game, we take a picture of the user to determine whether they will play as the good character or the evil character. Additinoally, when a character captures a key by walking over it, we increment the total points that they have. 
 
 
 ##Screenshot
@@ -46,15 +45,20 @@ Each team member should identify a favorite line of code, expression, or procedu
 ```
 This code is one of my favorites even though it looks simple. This is a pedicate that returns a boolean value depending on the condition statement that it checks for. This pedicate returns true if one of the players score reaches 15 and false if otherwise. However, what makes this code interesting is the fact that before it returns a boolean value, it performs some executions using the begin procedure. This begin procedure allows multiple executations of procedures before returning the boolean value.  
 
-####Lillian (another team member)
-This expression reads in a regular expression and elegantly matches it against a pre-existing hashmap....
-```scheme
-(let* ((expr (convert-to-regexp (read-line my-in-port)))
-             (matches (flatten
-                       (hash-map *words*
-                                 (lambda (key value)
-                                   (if (regexp-match expr key) key '()))))))
-  matches)
+####Justin Nguyen
+(define (scenes imgs) ;t =WorldState
+  (place-images (list player1 player-name1 player2 player-name2 (count player1score) (count1 player2score) key img) 
+                (list (htdp:make-posn player1X player1Y)
+                      (htdp:make-posn player1X (- player1Y 40))
+                      (htdp:make-posn player2X player2Y)
+                      (htdp:make-posn player2X (- player2Y 40))
+                      (htdp:make-posn 850 65)
+                      (htdp:make-posn 50 65)
+                      (htdp:make-posn keyX key)
+                      (htdp:make-posn 450 303)) window)
+)
+*This is my favorite lines of code because it is the position of where the images are when the program runs. The *(place-images (list...) places the images in the window and the next list is where the images are placed relavent *to the window. (player1X and player1Y are global variables)
+
 ```
 
 ##Additional Remarks
