@@ -12,11 +12,11 @@ Khyteang Lim
 Justin Nguyen 
 
 
-Rohit Krishnam
+Rohit Krishnan
 
 
 ##Overview
-A brief description of the project is given here.  The description is 1 to 3 sentences long.  Be concise and clear.
+
 
 ##Screenshot
 <p align="center">
