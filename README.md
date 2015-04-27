@@ -1,7 +1,5 @@
 # KeyVentures
-KeyVentures! An adventure multiplayer game.
-
-# KeyVentures
+Evil Khy and nice-guy Justin are arch enemies. The local king Krishnan of Holyoke has challenged them both to collect all the keys scattered across the universe and win the competition. It is your decision to pick which character to play as.
 
 ##Authors
 Khyteang Lim
@@ -37,7 +35,6 @@ Identify the OPL concepts demonstrated in your project. Be brief. A simple list 
 
 ##Favorite Lines of Code
 ####Khyteang Lim
-Each team member should identify a favorite line of code, expression, or procedure written by them, and explain what it does. Why is it your favorite? What OPL philosophy does it embody?
 ```scheme
 (define (scoreReach30 n) (cond ((= player2score 15) (begin (write evil) #t))
                                ((= player1score 15) (begin (write good) #t))
@@ -47,7 +44,7 @@ This code is one of my favorites even though it looks simple. This is a pedicate
 
 ####Justin Nguyen
  ```scheme
- (define (scenes imgs) ;t =WorldState
+ (define (scenes imgs)
    (place-images (list player1 player-name1 player2 player-name2 (count player1score) (count1 player2score) key img) 
                 (list (htdp:make-posn player1X player1Y)
                        (htdp:make-posn player1X (- player1Y 40))
