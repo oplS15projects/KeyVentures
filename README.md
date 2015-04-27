@@ -34,10 +34,10 @@ Identify the OPL concepts demonstrated in your project. Be brief. A simple list 
 
 <b>Planet Cute</b> We used the planetcute library which contains images drawn by Daniel Cook. These images represent our scenary and characters in the game. The library consists of blocks of images which we put together by stacking them on top of each other and side by side to create our world.
 
-<b>JSON</b> When we take a picture using the c++ code, the other program will store the results in an file called Outfile.json. We then use the JSON library to serialize that into a hashmap of emotions and values. We then use that to determine whether the user is happy or sad and that is used to pick their character. 
+<b>JSON</b> When we take a picture using the C++ code, the other program will store the results in an file called Outfile.json. We then use the JSON library to serialize that into a hashmap of emotions and values. We then use that to determine whether the user is happy or sad and that is used to pick their character. 
 
 ##Favorite Lines of Code
-####Khyteang Lim (a team member)
+####Khyteang Lim
 Each team member should identify a favorite line of code, expression, or procedure written by them, and explain what it does. Why is it your favorite? What OPL philosophy does it embody?
 ```scheme
 (define (scoreReach30 n) (cond ((= player2score 15) (begin (write evil) #t))
@@ -74,7 +74,7 @@ This is my favorite lines of code because it is the position of where the images
 The piece of code above will read a JSOn file in the current working directory and serialize it into a hash table. We then check the 'Happy and 'Anger properties and compare them to see if the user is happy or sad. 
 
 ##Additional Remarks
-Anything else you want to say in your report. Can rename or remove this section.
+Good luck running this.
 
 #How to Download and Run
 You may want to link to your latest release for easy downloading by people (such as Mark).
