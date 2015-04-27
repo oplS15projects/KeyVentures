@@ -1,117 +1,154 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>KeyVentures by oplS15projects</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>KeyVentures! by oplS15projects</title>
   </head>
+
   <body>
-    <section class="page-header">
-      <h1 class="project-name">KeyVentures</h1>
-      <h2 class="project-tagline">KeyVenture! An adventure platformer game.</h2>
-      <a href="https://github.com/oplS15projects/KeyVentures" class="btn">View on GitHub</a>
-      <a href="https://github.com/oplS15projects/KeyVentures/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/oplS15projects/KeyVentures/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <header>
+      <div class="inner">
+        <h1>KeyVentures!</h1>
+        <h2>KeyVentures! An action multiplayer game!</h2>
+        <a href="https://github.com/oplS15projects/KeyVentures" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
 
-    <section class="main-content">
-      <h1>
-<a id="keyventures" class="anchor" href="#keyventures" aria-hidden="true"><span class="octicon octicon-link"></span></a>KeyVentures!</h1>
-
-<p align="center">
-    <img src="http://docs.racket-lang.org/teachpack/pict.png">
-</p>
-
-<h3>
-<a id="problem-statement" class="anchor" href="#problem-statement" aria-hidden="true"><span class="octicon octicon-link"></span></a>Problem Statement</h3>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="keyventures" class="anchor" href="#keyventures" aria-hidden="true"><span class="octicon octicon-link"></span></a>KeyVentures</h1>
 
 <p>Evil Khy and nice-guy Justin are arch enemies. The local king Krishnan of Holyoke has challenged them both to collect all the keys scattered across the universe and win the competition. It is your decision to pick which character to play as.</p>
 
-<h3>
-<a id="problem-analysis" class="anchor" href="#problem-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Problem Analysis</h3>
+<h2>
+<a id="authors" class="anchor" href="#authors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors</h2>
 
-<p>To tackle this problem, we will use lambdas, lets, conditional statements, and the use of external API's. </p>
+<p>Khyteang Lim</p>
 
-<h3>
-<a id="data-set-or-other-source-materials" class="anchor" href="#data-set-or-other-source-materials" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data set or other source materials</h3>
+<p>Justin Nguyen </p>
 
-<p>In the beginning of the game, we will run a C++ code to take a picture of the user's face and depending upon whether they are happy or sad, choose "Evil Khy" or "nice-guy Justin" to play the rest of the game. The data will be passed from c++ to Racket via JSON. </p>
-
-<h3>
-<a id="deliverable-and-demonstration" class="anchor" href="#deliverable-and-demonstration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deliverable and Demonstration</h3>
-
-<p>At the end, there will be a working platformer game called Keyventure. The user will be able to choose Khy or Justin depending on their initial mood and use the arrow keys on the keyboard to control the character's movement. The spacebar or up arrow will be used to make the character jump over dangerous obstacles. </p>
-
-<p>This program will be interactive and will present the user with a GUI that they can play with. We will get keyboard input from the user to control movement.</p>
-
-<h3>
-<a id="evaluation-of-results" class="anchor" href="#evaluation-of-results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Evaluation of Results</h3>
-
-<p>If the game fully works, the user will be able to smile at the beginning of the game and play the rest of the game as nice-guy Justin or they can be sad and play the rest of the game as evil Khy. </p>
+<p>Rohit Krishnan</p>
 
 <h2>
-<a id="work-plan-and-schedule" class="anchor" href="#work-plan-and-schedule" aria-hidden="true"><span class="octicon octicon-link"></span></a>Work Plan and Schedule</h2>
+<a id="overview" class="anchor" href="#overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overview</h2>
 
-<h3>
-<a id="first-milestone-04-13" class="anchor" href="#first-milestone-04-13" aria-hidden="true"><span class="octicon octicon-link"></span></a>First Milestone (04-13)</h3>
-
-<p>Our first milestone will be to have a GUI on the racket side, the characters loaded on the screen able to be moved with keyboard input, and finally the c++ code able to take a picture of the user and determine their mood.</p>
-
-<h3>
-<a id="second-milestone-04-21" class="anchor" href="#second-milestone-04-21" aria-hidden="true"><span class="octicon octicon-link"></span></a>Second Milestone (04-21)</h3>
-
-<p>Our second milestone will have obstacles, background, and possibly music within the game. It will also be able to take the output of the c++ code and determine which character to play as.</p>
+<p>KeyVentures is a multi-player key finding game where two players race against each other to capture the key first. There is a twist where in the beginning of the game, we take a picture of the user to determine whether they will play as the good character or the evil character. Additionally, when a character captures a key by walking over it, we increment the total points that they have. </p>
 
 <h2>
-<a id="group-responsibilities" class="anchor" href="#group-responsibilities" aria-hidden="true"><span class="octicon octicon-link"></span></a>Group Responsibilities</h2>
+<a id="screenshot" class="anchor" href="#screenshot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screenshot</h2>
 
-<p>Here each group member gets a section where they, as an individual, detail what they are responsible for in this project. Each group member writes their own Responsibility section. Include the milestones and final deliverable.</p>
+<p align="center">
+     <img src="http://i.imgur.com/mndA6YT.png?1">
+</p>
 
-<h3>
-<a id="rohit-krishnan" class="anchor" href="#rohit-krishnan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rohit Krishnan</h3>
+<h2>
+<a id="concepts-demonstrated" class="anchor" href="#concepts-demonstrated" aria-hidden="true"><span class="octicon octicon-link"></span></a>Concepts Demonstrated</h2>
 
-<ul>
-<li>Modify C++ to take picture of user and analyze their mood</li>
-<li>Collect data from the racket side and determine which character to play as</li>
-</ul>
-
-<h3>
-<a id="justin-nguyen" class="anchor" href="#justin-nguyen" aria-hidden="true"><span class="octicon octicon-link"></span></a>Justin Nguyen</h3>
+<p>Identify the OPL concepts demonstrated in your project. Be brief. A simple list and example is sufficient. </p>
 
 <ul>
-<li>Take keyboard input and move characters</li>
-<li>Building some levels</li>
-</ul>
-
-<h3>
-<a id="khyteang-lim" class="anchor" href="#khyteang-lim" aria-hidden="true"><span class="octicon octicon-link"></span></a>Khyteang Lim</h3>
-
-<ul>
-<li>GUI of the game</li>
-<li>Creating the window</li>
-<li>Uploading the characters from the HDTP/PlanetCute library</li>
+<li>
+<strong>Data abstraction</strong> is used to provide access to the elements of the RSS feed.</li>
+<li>The objects in the OpenGL world are represented with <strong>recursive data structures.</strong>
+</li>
+<li>
+<strong>Symbolic language processing techniques</strong> are used in the parser.</li>
+<li>
+<strong>HashMap</strong> is used to serialize the data in the JSON file so it can be later accessed as key-value pairs.</li>
 </ul>
 
 <h2>
-<a id="proposal-presentation-link" class="anchor" href="#proposal-presentation-link" aria-hidden="true"><span class="octicon octicon-link"></span></a>Proposal Presentation Link</h2>
+<a id="external-technology-and-libraries" class="anchor" href="#external-technology-and-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>External Technology and Libraries</h2>
 
-<p><a href="https://docs.google.com/presentation/d/1rJbENX2HMqLwK012Huu0krBOsf2r1Fk0m8GWdhNJ_0g/edit?usp=sharing">https://docs.google.com/presentation/d/1rJbENX2HMqLwK012Huu0krBOsf2r1Fk0m8GWdhNJ_0g/edit?usp=sharing</a></p>
+<p><b>Planet Cute</b> We used the planetcute library which contains images drawn by Daniel Cook. These images represent our scenary and characters in the game. The library consists of blocks of images which we put together by stacking them on top of each other and side by side to create our world.</p>
 
+<p><b>JSON</b> When we take a picture using the C++ code, the other program will store the results in an file called Outfile.json. We then use the JSON library to serialize that into a hashmap of emotions and values. We then use that to determine whether the user is happy or sad and that is used to pick their character. </p>
 
+<h2>
+<a id="favorite-lines-of-code" class="anchor" href="#favorite-lines-of-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Favorite Lines of Code</h2>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/oplS15projects/KeyVentures">Khyventures</a> is maintained by <a href="https://github.com/oplS15projects">oplS15projects</a>.</span>
+<h4>
+<a id="khyteang-lim" class="anchor" href="#khyteang-lim" aria-hidden="true"><span class="octicon octicon-link"></span></a>Khyteang Lim</h4>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+<div class="highlight highlight-scheme"><pre>(<span class="pl-k">define</span> (<span class="pl-en">scoreReach30</span><span class="pl-smi"> n</span>) (<span class="pl-k">cond</span> ((<span class="pl-k">=</span> player2score <span class="pl-c1">15</span>) (<span class="pl-k">begin</span> (<span class="pl-c1">write</span> evil) <span class="pl-c1">#t</span>))
+                               ((<span class="pl-k">=</span> player1score <span class="pl-c1">15</span>) (<span class="pl-k">begin</span> (<span class="pl-c1">write</span> good) <span class="pl-c1">#t</span>))
+                               (<span class="pl-k">else</span> <span class="pl-c1">#f</span>)))</pre></div>
 
-    </section>
+<p>This code is one of my favorites even though it looks simple. This is a pedicate that returns a boolean value depending on the condition statement that it checks for. This pedicate returns true if one of the players score reaches 15 and false if otherwise. However, what makes this code interesting is the fact that before it returns a boolean value, it performs some executions using the begin procedure. This begin procedure allows multiple executations of procedures before returning the boolean value.  </p>
+
+<h4>
+<a id="justin-nguyen" class="anchor" href="#justin-nguyen" aria-hidden="true"><span class="octicon octicon-link"></span></a>Justin Nguyen</h4>
+
+<div class="highlight highlight-scheme"><pre> (<span class="pl-k">define</span> (<span class="pl-en">scenes</span><span class="pl-smi"> imgs</span>)
+   (place-images (<span class="pl-c1">list</span> player1 player-name1 player2 player-name2 (count player1score) (count1 player2score) key img) 
+                (<span class="pl-c1">list</span> (htdp:make-posn player1X player1Y)
+                       (htdp:make-posn player1X (<span class="pl-k">-</span> player1Y <span class="pl-c1">40</span>))
+                       (htdp:make-posn player2X player2Y)
+                       (htdp:make-posn player2X (<span class="pl-k">-</span> player2Y <span class="pl-c1">40</span>))
+                       (htdp:make-posn <span class="pl-c1">850</span> <span class="pl-c1">65</span>)
+                       (htdp:make-posn <span class="pl-c1">50</span> <span class="pl-c1">65</span>)
+                       (htdp:make-posn keyX key)
+                       (htdp:make-posn <span class="pl-c1">450</span> <span class="pl-c1">303</span>)) window))</pre></div>
+
+<p>This is my favorite lines of code because it is the position of where the images are when the program runs. The (place-images (list...) places the images in the window and the next list is where the images are placed relavent to the window. (player1X and player1Y are global variables)</p>
+
+<h4>
+<a id="rohit-krishnan" class="anchor" href="#rohit-krishnan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rohit Krishnan</h4>
+
+<div class="highlight highlight-scheme"><pre>(<span class="pl-k">define</span> <span class="pl-smi">pick-character</span>
+  (lambda()
+    (<span class="pl-k">begin</span> (take-picture)
+           (<span class="pl-k">define</span> <span class="pl-smi">result</span> (string-&gt;jsexpr
+            (file-&gt;string (string-append working-directory <span class="pl-s"><span class="pl-pds">"</span>Outfile.json<span class="pl-pds">"</span></span>))))
+           (<span class="pl-k">&gt;</span> (hash-ref result <span class="pl-c1">'happy</span>) (<span class="pl-k">*</span> <span class="pl-c1">3</span> (hash-ref result <span class="pl-c1">'anger</span>))))))</pre></div>
+
+<p>The piece of code above will read a JSON file in the current working directory and serialize it into a hash table. We then check the 'Happy and 'Anger properties and compare them to see if the user is happy or sad. </p>
+
+<h2>
+<a id="additional-remarks" class="anchor" href="#additional-remarks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Additional Remarks</h2>
+
+<p>Good luck running this.</p>
+
+<h1>
+<a id="how-to-download-and-run" class="anchor" href="#how-to-download-and-run" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Download and Run</h1>
+
+<pre><code> -Extract the two things in the archive to the KeyVentures folder. Make sure the .rkt file and the emotime folder are in the same directory.
+ -Open up a terminal, cd into emotime/assets and run the following command once: cd ../build; cmake .. ; make clean; make ; make install; cd ../assets; ./emotimegui_cli -s ../resources/haarcascade_frontalface_cbcl1.xml ../resources/haarcascade_eye.xml 52 52 1 5 8 svm ../assets/svm_1vsallext_1_5_8_95c2eb0b58/*
+ -Open the gui.rkt file and change the working-directory variable to point to wherever you have the "emotime" folder located. In my computer, it was /home/rkrishnan/Documents/OPL/finalProject/emotime, so I set that variable to be /home/rkrishnan/Documents/OPL/finalProject/.  
+ -That's it, run the gui.rkt file and start by taking a picture first, then the game will start. To play, navigate with the arrow keys and the WASD keys.
+</code></pre>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/oplS15projects/KeyVentures/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/oplS15projects/KeyVentures/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/oplS15projects/KeyVentures"></a> is maintained by <a href="https://github.com/oplS15projects">oplS15projects</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
 
   
   </body>
 </html>
-
