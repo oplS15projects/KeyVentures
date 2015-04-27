@@ -57,15 +57,11 @@
 <h2>
 <a id="concepts-demonstrated" class="anchor" href="#concepts-demonstrated" aria-hidden="true"><span class="octicon octicon-link"></span></a>Concepts Demonstrated</h2>
 
-<p>Identify the OPL concepts demonstrated in your project. Be brief. A simple list and example is sufficient. </p>
-
 <ul>
 <li>
-<strong>Data abstraction</strong> is used to provide access to the elements of the RSS feed.</li>
-<li>The objects in the OpenGL world are represented with <strong>recursive data structures.</strong>
-</li>
+<strong>Conditions</strong> it allowed the user make their own choices using the keyboard. Also it allowed us to keep the characters within the gui.</li>
 <li>
-<strong>Symbolic language processing techniques</strong> are used in the parser.</li>
+<strong>Multiply procedures</strong> allowed the key to move to a random place once a character touched the key.</li>
 <li>
 <strong>HashMap</strong> is used to serialize the data in the JSON file so it can be later accessed as key-value pairs.</li>
 </ul>
@@ -83,11 +79,15 @@
 <h4>
 <a id="khyteang-lim" class="anchor" href="#khyteang-lim" aria-hidden="true"><span class="octicon octicon-link"></span></a>Khyteang Lim</h4>
 
-<div class="highlight highlight-scheme"><pre>(<span class="pl-k">define</span> (<span class="pl-en">scoreReach30</span><span class="pl-smi"> n</span>) (<span class="pl-k">cond</span> ((<span class="pl-k">=</span> player2score <span class="pl-c1">15</span>) (<span class="pl-k">begin</span> (<span class="pl-c1">write</span> evil) <span class="pl-c1">#t</span>))
-                               ((<span class="pl-k">=</span> player1score <span class="pl-c1">15</span>) (<span class="pl-k">begin</span> (<span class="pl-c1">write</span> good) <span class="pl-c1">#t</span>))
-                               (<span class="pl-k">else</span> <span class="pl-c1">#f</span>)))</pre></div>
+<div class="highlight highlight-scheme"><pre>(<span class="pl-k">define</span> (<span class="pl-en">setUpCharacter</span>) 
+  (<span class="pl-k">cond</span> ((pick-character) (<span class="pl-k">begin</span> (<span class="pl-k">set!</span> player1 (<span class="pl-k">cond</span> ((<span class="pl-k">=</span> (random <span class="pl-c1">2</span>) <span class="pl-c1">0</span>) (<span class="pl-c1">car</span> goodSetCharacter))
+               (<span class="pl-k">else</span> (<span class="pl-c1">car</span> (<span class="pl-c1">cdr</span> goodSetCharacter))))) (<span class="pl-k">set!</span> player-name1 (text <span class="pl-s"><span class="pl-pds">"</span>GoodGuyJustin<span class="pl-pds">"</span></span> <span class="pl-c1">12</span> <span class="pl-s"><span class="pl-pds">"</span>black<span class="pl-pds">"</span></span>)) (<span class="pl-k">set!</span> player2 (<span class="pl-k">cond</span> ((<span class="pl-k">=</span> (random <span class="pl-c1">2</span>) <span class="pl-c1">0</span>) (<span class="pl-c1">car</span> evilSetCharacter))
+               (<span class="pl-k">else</span> (<span class="pl-c1">car</span> (<span class="pl-c1">cdr</span> evilSetCharacter))))) (<span class="pl-k">set!</span> player-name2 (text <span class="pl-s"><span class="pl-pds">"</span>EvilKhy<span class="pl-pds">"</span></span> <span class="pl-c1">12</span> <span class="pl-s"><span class="pl-pds">"</span>black<span class="pl-pds">"</span></span>))))
+        (<span class="pl-k">else</span> (<span class="pl-k">begin</span> (<span class="pl-k">set!</span> player2 (<span class="pl-k">cond</span> ((<span class="pl-k">=</span> (random <span class="pl-c1">2</span>) <span class="pl-c1">0</span>) (<span class="pl-c1">car</span> goodSetCharacter))
+               (<span class="pl-k">else</span> (<span class="pl-c1">car</span> (<span class="pl-c1">cdr</span> goodSetCharacter))))) (<span class="pl-k">set!</span> player1 (<span class="pl-k">cond</span> ((<span class="pl-k">=</span> (random <span class="pl-c1">2</span>) <span class="pl-c1">0</span>) (<span class="pl-c1">car</span> evilSetCharacter))
+               (<span class="pl-k">else</span> (<span class="pl-c1">car</span> (<span class="pl-c1">cdr</span> evilSetCharacter)))))))))</pre></div>
 
-<p>This code is one of my favorites even though it looks simple. This is a pedicate that returns a boolean value depending on the condition statement that it checks for. This pedicate returns true if one of the players score reaches 15 and false if otherwise. However, what makes this code interesting is the fact that before it returns a boolean value, it performs some executions using the begin procedure. This begin procedure allows multiple executations of procedures before returning the boolean value.  </p>
+<p>This code is what allows the first player to choose which characters, EvilKhy or GoodGuyJustin, he/she wants to play as in the game. This use the concept of the conditional statement which checks to see if the procedure pick-character returns true or false. However, what makes this piece of code interesting is that it uses the begin and set! procedures. The begin procedure allows multiple executations of procedures while set! allows redefining of variables.</p>
 
 <h4>
 <a id="justin-nguyen" class="anchor" href="#justin-nguyen" aria-hidden="true"><span class="octicon octicon-link"></span></a>Justin Nguyen</h4>
