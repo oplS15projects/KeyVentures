@@ -61,6 +61,18 @@ This code is one of my favorites even though it looks simple. This is a pedicate
 ```
 This is my favorite lines of code because it is the position of where the images are when the program runs. The (place-images (list...) places the images in the window and the next list is where the images are placed relavent to the window. (player1X and player1Y are global variables)
 
+
+####Rohit Krishnan
+```scheme
+(define pick-character
+  (lambda()
+    (begin (take-picture)
+           (define result (string->jsexpr
+            (file->string (string-append working-directory "Outfile.json"))))
+           (> (hash-ref result 'happy) (* 3 (hash-ref result 'anger))))))
+```
+The piece of code above will read a JSOn file in the current working directory and serialize it into a hash table. We then check the 'Happy and 'Anger properties and compare them to see if the user is happy or sad. 
+
 ##Additional Remarks
 Anything else you want to say in your report. Can rename or remove this section.
 
