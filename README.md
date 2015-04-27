@@ -27,7 +27,7 @@ Identify the OPL concepts demonstrated in your project. Be brief. A simple list 
 * **Data abstraction** is used to provide access to the elements of the RSS feed.
 * The objects in the OpenGL world are represented with **recursive data structures.**
 * **Symbolic language processing techniques** are used in the parser.
-* * **HashMap** is used to serialize the data in the JSON file so it can be later accessed as key-value pairs.
+* **HashMap** is used to serialize the data in the JSON file so it can be later accessed as key-value pairs.
 
 ##External Technology and Libraries
 
