@@ -6,18 +6,22 @@ This is a template for using your repo's README.md as your project web page.
 I recommend you copy and paste into your README file. Delete this line and the one above it, customize everything else. Make it look good!
 
 ##Authors
-Person One
 
-Person Two
+
+Khyteang Lim
+
+
+Justin Nguyen 
+
+
+Rohit Krishnam
+
 
 ##Overview
 A brief description of the project is given here.  The description is 1 to 3 sentences long.  Be concise and clear.
 
 ##Screenshot
-(insert a screenshot here. You may opt to get rid of the title for it. You need at least one screenshot. Make it actually appear here, don't just add a link.)
-
-Here's a demonstration of how to display an image that's uploaded to this repo:
-![screenshot showing env diagram](withdraw.png)
+![screenshot showing env diagram](OPLProjectScreenshot.png)
 
 ##Concepts Demonstrated
 Identify the OPL concepts demonstrated in your project. Be brief. A simple list and example is sufficient. 
@@ -28,13 +32,19 @@ Identify the OPL concepts demonstrated in your project. Be brief. A simple list 
 ##External Technology and Libraries
 Briefly describe the existing technology you utilized, and how you used it. Provide a link to that technology(ies).
 
+
+We used the planetcute library which contains images drawn by Daniel Cook. These images represent our scenary and characters in the game. The library consists of blocks of images which we put together by stacking them on top of each other and side by side to create our world.
+
 ##Favorite Lines of Code
-####Mark (a team member)
+####Khyteang Lim (a team member)
 Each team member should identify a favorite line of code, expression, or procedure written by them, and explain what it does. Why is it your favorite? What OPL philosophy does it embody?
-Remember code looks something like this:
 ```scheme
-(map (lambda (x) (foldr compose functions)) data)
+(define (scoreReach30 n) (cond ((= player2score 15) (begin (write evil) #t))
+                               ((= player1score 15) (begin (write good) #t))
+                               (else #f)))
 ```
+This code is one of my favorites even though it looks simple. This is a pedicate that returns a boolean value depending on the condition statement. This pedicate returns true if one of the players score reaches 15 and false if otherwise. However, what makes this code interesting is the fact that before it returns a boolean value, it performs some executions using the begin procedure. This begin procedure allows multiple executations of procedure before returning the boolean value.  
+
 ####Lillian (another team member)
 This expression reads in a regular expression and elegantly matches it against a pre-existing hashmap....
 ```scheme
