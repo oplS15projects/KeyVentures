@@ -1,53 +1,79 @@
-# KeyVentures!
-
-<p align="center">
-	<img src="http://docs.racket-lang.org/teachpack/pict.png"/>
-</p>
-
-### Problem Statement
+# KeyVentures
 Evil Khy and nice-guy Justin are arch enemies. The local king Krishnan of Holyoke has challenged them both to collect all the keys scattered across the universe and win the competition. It is your decision to pick which character to play as.
 
-### Problem Analysis
-To tackle this problem, we will use lambdas, lets, conditional statements, and the use of external API's. 
+##Authors
+Khyteang Lim
 
-### Data set or other source materials
-In the beginning of the game, we will run a C++ code to take a picture of the user's face and depending upon whether they are happy or sad, choose "Evil Khy" or "nice-guy Justin" to play the rest of the game. The data will be passed from c++ to Racket via JSON. 
 
-### Deliverable and Demonstration
-At the end, there will be a working platformer game called Keyventure. The user will be able to choose Khy or Justin depending on their initial mood and use the arrow keys on the keyboard to control the character's movement. The spacebar or up arrow will be used to make the character jump over dangerous obstacles. 
+Justin Nguyen 
 
-This program will be interactive and will present the user with a GUI that they can play with. We will get keyboard input from the user to control movement.
 
-### Evaluation of Results
-If the game fully works, the user will be able to smile at the beginning of the game and play the rest of the game as nice-guy Justin or they can be sad and play the rest of the game as evil Khy. 
+Rohit Krishnan
 
-## Work Plan and Schedule
 
-### First Milestone (04-13)
-Our first milestone will be to have a GUI on the racket side, the characters loaded on the screen able to be moved with keyboard input, and finally the c++ code able to take a picture of the user and determine their mood.
+##Overview
+KeyVentures is a multi-player key finding game where two players race against each other to capture the key first. There is a twist where in the beginning of the game, we take a picture of the user to determine whether they will play as the good character or the evil character. Additionally, when a character captures a key by walking over it, we increment the total points that they have. 
 
-### Second Milestone (04-21)
-Our second milestone will have obstacles, background, and possibly music within the game. It will also be able to take the output of the c++ code and determine which character to play as.
+##Screenshot
+<p align="center">
+     <img src="http://i.imgur.com/mndA6YT.png?1"/>
+</p>
 
-## Group Responsibilities
-Here each group member gets a section where they, as an individual, detail what they are responsible for in this project. Each group member writes their own Responsibility section. Include the milestones and final deliverable.
+##Concepts Demonstrated
+Identify the OPL concepts demonstrated in your project. Be brief. A simple list and example is sufficient. 
+* **Data abstraction** is used to provide access to the elements of the RSS feed.
+* The objects in the OpenGL world are represented with **recursive data structures.**
+* **Symbolic language processing techniques** are used in the parser.
+* **HashMap** is used to serialize the data in the JSON file so it can be later accessed as key-value pairs.
 
-### Rohit Krishnan
-- Modify C++ to take picture of user and analyze their mood
-- Collect data from the racket side and determine which character to play as
+##External Technology and Libraries
 
-### Justin Nguyen
-- Take keyboard input and move characters
-- Building some levels
+<b>Planet Cute</b> We used the planetcute library which contains images drawn by Daniel Cook. These images represent our scenary and characters in the game. The library consists of blocks of images which we put together by stacking them on top of each other and side by side to create our world.
 
-### Khyteang Lim
-- GUI of the game
-- Creating the window
-- Uploading the characters from the HDTP/PlanetCute library
+<b>JSON</b> When we take a picture using the C++ code, the other program will store the results in an file called Outfile.json. We then use the JSON library to serialize that into a hashmap of emotions and values. We then use that to determine whether the user is happy or sad and that is used to pick their character. 
 
-## Proposal Presentation Link
-https://docs.google.com/presentation/d/1rJbENX2HMqLwK012Huu0krBOsf2r1Fk0m8GWdhNJ_0g/edit?usp=sharing
+##Favorite Lines of Code
+####Khyteang Lim
+```scheme
+(define (scoreReach30 n) (cond ((= player2score 15) (begin (write evil) #t))
+                               ((= player1score 15) (begin (write good) #t))
+                               (else #f)))
+```
+This code is one of my favorites even though it looks simple. This is a pedicate that returns a boolean value depending on the condition statement that it checks for. This pedicate returns true if one of the players score reaches 15 and false if otherwise. However, what makes this code interesting is the fact that before it returns a boolean value, it performs some executions using the begin procedure. This begin procedure allows multiple executations of procedures before returning the boolean value.  
 
-<!-- Links -->
-[piazza]: https://piazza.com/class/i55is8xqqwhmr?cid=453
-[markdown]: https://help.github.com/articles/markdown-basics/
+####Justin Nguyen
+ ```scheme
+ (define (scenes imgs)
+   (place-images (list player1 player-name1 player2 player-name2 (count player1score) (count1 player2score) key img) 
+                (list (htdp:make-posn player1X player1Y)
+                       (htdp:make-posn player1X (- player1Y 40))
+                       (htdp:make-posn player2X player2Y)
+                       (htdp:make-posn player2X (- player2Y 40))
+                       (htdp:make-posn 850 65)
+                       (htdp:make-posn 50 65)
+                       (htdp:make-posn keyX key)
+                       (htdp:make-posn 450 303)) window))
+```
+This is my favorite lines of code because it is the position of where the images are when the program runs. The (place-images (list...) places the images in the window and the next list is where the images are placed relavent to the window. (player1X and player1Y are global variables)
+
+
+####Rohit Krishnan
+```scheme
+(define pick-character
+  (lambda()
+    (begin (take-picture)
+           (define result (string->jsexpr
+            (file->string (string-append working-directory "Outfile.json"))))
+           (> (hash-ref result 'happy) (* 3 (hash-ref result 'anger))))))
+```
+The piece of code above will read a JSON file in the current working directory and serialize it into a hash table. We then check the 'Happy and 'Anger properties and compare them to see if the user is happy or sad. 
+
+##Additional Remarks
+Good luck running this.
+
+#How to Download and Run
+
+     -Extract the two things in the archive to the KeyVentures folder. Make sure the .rkt file and the emotime folder are in the same directory.
+     -Open up a terminal, cd into emotime/assets and run the following command once: cd ../build; cmake .. ; make clean; make ; make install; cd ../assets; ./emotimegui_cli -s ../resources/haarcascade_frontalface_cbcl1.xml ../resources/haarcascade_eye.xml 52 52 1 5 8 svm ../assets/svm_1vsallext_1_5_8_95c2eb0b58/*
+     -Open the gui.rkt file and change the working-directory variable to point to wherever you have the "emotime" folder located. In my computer, it was /home/rkrishnan/Documents/OPL/finalProject/emotime, so I set that variable to be /home/rkrishnan/Documents/OPL/finalProject/.  
+     -That's it, run the gui.rkt file and start by taking a picture first, then the game will start. To play, navigate with the arrow keys and the WASD keys.
