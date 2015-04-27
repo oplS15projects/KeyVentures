@@ -58,7 +58,7 @@ This code is one of my favorites even though it looks simple. This is a pedicate
                       (htdp:make-posn keyX key)
                       (htdp:make-posn 450 303)) window))
 ```
-*This is my favorite lines of code because it is the position of where the images are when the program runs. The *(place-images (list...) places the images in the window and the next list is where the images are placed relavent *to the window. (player1X and player1Y are global variables)
+*This is my favorite lines of code because it is the position of where the images are when the program runs. The (place-images (list...) places the images in the window and the next list is where the images are placed relavent *to the window. (player1X and player1Y are global variables)
 
 ```
 
