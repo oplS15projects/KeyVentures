@@ -20,10 +20,8 @@ KeyVentures is a multi-player key finding game where two players race against ea
 </p>
 
 ##Concepts Demonstrated
-Identify the OPL concepts demonstrated in your project. Be brief. A simple list and example is sufficient. 
-* **Data abstraction** is used to provide access to the elements of the RSS feed.
-* The objects in the OpenGL world are represented with **recursive data structures.**
-* **Symbolic language processing techniques** are used in the parser.
+* **Conditions** it allowed the user make their own choices using the keyboard. Also it allowed us to keep the characters within the gui.
+* **Multiply procedures** allowed the key to move to a random place once a character touched the key.
 * **HashMap** is used to serialize the data in the JSON file so it can be later accessed as key-value pairs.
 
 ##External Technology and Libraries
