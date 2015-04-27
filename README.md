@@ -77,7 +77,9 @@ The piece of code above will read a JSOn file in the current working directory a
 Good luck running this.
 
 #How to Download and Run
-You may want to link to your latest release for easy downloading by people (such as Mark).
 
-Include what file to run, what to do with that file, how to interact with the app when its running, etc. 
-
+#How to Download and Run
+     -Extract the two things in the archive to the KhyVentures folder. Make sure the .rkt file and the emotime folder are in the same directory.
+     -Open up a terminal, cd into emotime/assets and run the following command once: cd ../build; cmake .. ; make clean; make ; make install; cd ../assets; ./emotimegui_cli -s ../resources/haarcascade_frontalface_cbcl1.xml ../resources/haarcascade_eye.xml 52 52 1 5 8 svm ../assets/svm_1vsallext_1_5_8_95c2eb0b58/*
+     -Open the gui.rkt file and change the working-directory variable to point to wherever you have the "emotime" folder located. In my computer, it was /home/rkrishnan/Documents/OPL/finalProject/emotime, so I set that variable to be /home/rkrishnan/Documents/OPL/finalProject/.  
+     -That's it, run the gui.rkt file and start by taking a picture first, then the game will start. To play, navigate with the arrow keys and the WASD keys.
