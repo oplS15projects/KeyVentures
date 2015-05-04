@@ -9,7 +9,7 @@
 (require racket/file)
 (require json)
 
-(define working-directory "/home/justin/projects/KeyVentures/")
+(define working-directory "./")
 (define take-picture 
   (λ()
     (system (string-append working-directory "emotime/assets/emotimegui_cli -s " working-directory "emotime/resources/haarcascade_frontalface_cbcl1.xml " working-directory "emotime/resources/haarcascade_eye.xml 52 52 1 5 8 svm " working-directory "emotime/assets/svm_1vsallext_1_5_8_95c2eb0b58/*"))
